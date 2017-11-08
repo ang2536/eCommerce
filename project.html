@@ -1,0 +1,88 @@
+<!doctypehtml>
+<html>
+    <head>
+            <title>ally's dad hats</title>
+            <style>
+                img{
+                    width:200px;
+                }
+                input{
+                    width:20px;
+                }
+            </style>
+            <script>
+                function bill() {
+                    var qty1 = document.getElementById(qty1);
+                    var qty2 = document.getElementById(qty2);
+                    var qty3 = document.getElementById(qty3);
+                    var output = document.getElementById("output");
+                    var tax = subtotal * .0875
+                    var hat1price = parseFloat(14);
+                    var wholesaleprice1 = parseFloat(10);
+                    var hat2price = parseFloat(14);
+                    var wholesaleprice2 = parseFloat(10);
+                    var hat3price = parseFloat(14);
+                    var wholesaleprice3 = parseFloat(10);
+                    var Customersubtotal = (parseInt(qty1.value) * 18.85) + (parseInt(qty2.value) * 19.80) + (parseInt(qty3.value) * 20.00)
+                    var Companysubtotal = wholesaleprice1 * qty1 + wholesaleprice2 * qty2 
+                    var tax = (0.0875 * subtotal.value);
+                    var shipping1 = parseFloat(25);
+                    var shipping2 = parseFloat(15);
+                    var shipping3 = parseFloat(0);
+                    var build = ""; 
+                    build += "subtotal: " + Companysubtotal.value + "<br>"
+                    build += "tax: " + tax.toFixed(2) + "<br>"
+                    build += "shipping: " + shipping1.value + "<br>"
+                    build += "--------------------------------------<br>";
+                    build += "total:" + total.toFixed(2);
+
+                output.innerHTML = build;
+                if(Customersubtotal.value<$100){
+                    build+= "$25 shipping";
+                }else if (Customersubtotal.value>=100 && = 200){
+                    build+= "$15 shipping";
+                }else if (Customersubtotal.value>=200){
+                    build+= "free shipping!!";
+                }
+            }
+            </script>
+        </head>
+        <body>
+            <div>
+                <button onclick = "bill()">
+                    bill
+                        </button>
+                    <div id = "output"></div>
+                <h1>DOPE hat</h1>
+                <img src="hat1.jpg"><br>
+                <span>
+                    $14.00
+                </span>
+                <p>
+                    adjustable dad hat made with soft maroon cloth and "DOPE" stitched on the front. Can be good fit with any outfit!
+                </p>
+                quantity: <input type = "text" id = "quantity1"><br>
+
+                <h1>OBEY hat</h1>
+                <img src="hat2.jpg"><br>
+                <span>
+                    $14.00
+                </span>
+                <p>
+                    adjustable dad hat made with soft black cloth and "OBEY" stitched on the front. Can be good fit with any outfit!
+                </p>
+                quantity: <input type = "text" id = "quantity2"><br>
+
+                <h1>RIPNDIP hat</h1>
+                <img src="hat3.jpg"><br>
+                <span>
+                    $14.00
+                </span>
+                <p>
+                    adjustable dad hat made with soft pink cloth and lazy, side ways cat stitched on the front. Can be good fit with any outfit!
+                </p>
+                quantity: <input type = "text" id = "quantity3">
+
+            </div>
+    </body>
+</html>
