@@ -30,9 +30,9 @@
                     var shipping3 = parseFloat(0);
                     var total = Customersubtotal + tax + shipping1
                     var build = ""; 
-                    build += "subtotal: " + Companysubtotal.value + "<br>"
-                    build += "tax: " + tax.toFixed(2) + "<br>"
-                    build += "shipping: " + shipping1.value + "<br>"
+                    build += "subtotal: $" + Companysubtotal.toFixed(2) + "<br>"
+                    build += "tax: $" + tax.toFixed(2) + "<br>"
+                    build += "shipping: $" + shipping1.toFixed(2) + "<br>"
                     build += "--------------------------------------<br>";
                     build += "total:" + total.toFixed(2);
 
